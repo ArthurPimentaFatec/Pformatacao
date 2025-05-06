@@ -80,5 +80,19 @@ namespace Pformatacao
             else
                 MessageBox.Show("Não é bissexto");
         }
+
+        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            DateTime dtEscolhida = monthCalendar1.SelectionStart;
+
+            MessageBox.Show($"Data escolhida: {dtEscolhida.ToString("d")}");
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime dtEscolhida = dateTimePicker1.Value;
+
+            MessageBox.Show($"Data escolhida: {dtEscolhida.ToString("d")}");
+        }
     }
 }
